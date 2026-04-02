@@ -135,8 +135,11 @@ Example:
 Describe your scoring logic in plain language.
 
 - What features of each song does it consider
+  we consider "Genre", "Mood", "Energy", "Danceability", "valence"
 - What information about the user does it use
+  Favorite genre, Favorite mood, Target energy level, Favorite Danceability, Favorite Valence Level
 - How does it turn those into a number
+  We compare each song's features to the user's preferences. For features like genre and mood, we check if they match exactly. For numeric features like energy and danceability, we measure how close the numbers are—the smaller the difference, the better the match. We then combine all these differences into one overall score. The smaller the overall score, the better the recommendation.
 
 Try to avoid code in this section, treat it like an explanation to a non programmer.
 
