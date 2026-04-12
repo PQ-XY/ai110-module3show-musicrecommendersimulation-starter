@@ -17,17 +17,34 @@ Replace this paragraph with your own summary of what your version does.
 
 ## How The System Works
 
-Explain your design in plain language.
+This is a **content-based recommender** that compares song characteristics to a user's taste profile.
 
-Some prompts to answer:
+**Song Features:**
+- `genre` (categorical) – type of music (rock, lofi, pop, jazz, etc.)
+- `mood` (categorical) – emotional vibe (chill, intense, happy, relaxed, etc.)
+- `energy` (numeric 0–1) – how intense/energetic the song is
+- `danceability` (numeric 0–1) – how rhythmic and groove-based it is
+- `valence` (numeric 0–1) – how positive/happy vs negative/dark it sounds
+- Other features: title, artist, tempo_bpm, acousticness (available but optional)
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
+**UserProfile Stores:**
+- `favorite_genre` – preferred genre (e.g., "rock")
+- `favorite_mood` – preferred mood (e.g., "intense")
+- `target_energy` – preferred energy level (0–1 scale)
+- `favorite_danceability` – preferred danceability (0–1 scale)
+- `favorite_valence` – preferred valence/positivity level (0–1 scale)
 
-You can include a simple diagram or bullet list if helpful.
+**How Scoring Works:**
+1. For **categorical features** (genre, mood): Check if song matches exactly. Match = 0 difference, no match = gets penalized
+2. For **numeric features** (energy, danceability, valence): Calculate the difference between user preference and song value. Smaller difference = better match
+3. **Combine all differences** into one overall score
+4. **Lower score = better recommendation**
+
+**How We Choose Which Songs to Recommend:**
+1. Score all songs using the logic above
+2. Rank songs from best (lowest score) to worst (highest score)
+3. Return top K songs (typically 3–5)
+4. Skip songs the user has already heard
 
 ---
 
