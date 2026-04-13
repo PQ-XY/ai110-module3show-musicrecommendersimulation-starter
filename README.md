@@ -204,9 +204,11 @@ Imagine you walk into a record store and tell the clerk: "I like pop music, ener
 
 ---
 
+```markdown
 **Visual Overview:**
 
 ![Music Recommender System Diagram](img/diagram.png)
+```
 
 ## 4. Data  
 
