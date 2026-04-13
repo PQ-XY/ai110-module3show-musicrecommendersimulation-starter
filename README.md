@@ -204,6 +204,12 @@ Imagine you walk into a record store and tell the clerk: "I like pop music, ener
 
 ---
 
+```markdown
+**Visual Overview:**
+
+![Music Recommender System Diagram](img/diagram.png)
+```
+
 ## 4. Data  
 
 **Catalog Size:** 18 songs (10 original starter songs + 8 new additions to increase diversity)
@@ -318,6 +324,11 @@ This proved the weights work as intended but showed that different user populati
 **What Surprised Me:** Small changes in catalog representation (lofi having 3x songs vs. jazz having 1) compound into unintended bias that's invisible until tested. The designer never said "favor lofi," but the data topology created it anyway. This mirrors real AI bias incidents (Amazon's resume screener learned gender bias; not programmed in, but in the data).
 
 ---
+![recommendation for user 1](img/ranking1.png)
+![recommendation for user 2](img/ranking2.png)
+![recommendation for user 3](img/ranking3.png)
+![recommendation for user 4](img/ranking4.png)
+![recommendation for user 5](img/ranking5.png)
 
 ## 8. Future Work  
 
