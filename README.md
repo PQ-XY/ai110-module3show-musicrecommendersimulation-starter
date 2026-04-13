@@ -163,7 +163,7 @@ Build your summary by reading [**Model Card**](model_card.md) — sections 5, 6,
 
 Combines reflection and model card framing from the Module 3 guidance. :contentReference[oaicite:2]{index=2}  
 
-```markdown
+
 # 🎧 Model Card: Music Recommender Simulation
 
 ## 1. Model Name  
@@ -204,11 +204,11 @@ Imagine you walk into a record store and tell the clerk: "I like pop music, ener
 
 ---
 
-```markdown
+
 **Visual Overview:**
 
 ![Music Recommender System Diagram](img/diagram.png)
-```
+
 
 ## 4. Data  
 
